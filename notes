@@ -1,0 +1,57 @@
+
+
+-- Chromium Settings
+
+-- To fix the right click menu in chrome:
+chrome://flags -> preferred Ozone platform == Wayland
+
+-- Remove the scrollbar
+chrome://flags -> Overlay Scrollbars == Enabled
+
+-- Fix slow typing in obmibox glitch
+chrome://flags -> Obnibox Google Drive Document Suggestions == Disabled
+
+
+
+
+
+-- Neovim Settings
+
+-- colorscheme.lua
+
+-- neovim pywal support
+return {
+  { "AlphaTechnolog/pywal.nvim" },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "pywal",
+    },
+  },
+  {
+    "xiyaowong/transparent.nvim",
+    config = function()
+      require("transparent").clear_prefix("lualine")
+    end,
+  },
+            -- To fix 
+            Highlight group 'NotifyBackground' has no background highlight
+            Please provide an RGB hex value or highlight group with a background value for 'background_colour' option.
+            This is the colour that will be used for 100% transparency.
+
+  { "nvim-notify", opts = {
+    background_colour = "#000000",
+  } },
+}
+
+-- To enable transparent background in neovim
+return {
+  "folke/tokyonight.nvim",
+  opts = {
+    transparent = true,
+    styles = {
+      sidebars = "transparent",
+      floats = "transparent",
+    },
+  },
+}
