@@ -1,0 +1,97 @@
+
+#!/bin/bash
+#                _ _
+# __      ____ _| | |_ __   __ _ _ __   ___ _ __
+# \ \ /\ / / _` | | | '_ \ / _` | '_ \ / _ \ '__|
+#  \ V  V / (_| | | | |_) | (_| | |_) |  __/ |
+#   \_/\_/ \__,_|_|_| .__/ \__,_| .__/ \___|_|
+#                   |_|         |_|
+#
+# by Stephan Raabe (2023)
+# -----------------------------------------------------
+
+# -----------------------------------------------------
+# Run the chrome theme generation script
+# -----------------------------------------------------
+~/dotfiles/chromium/scripts/chrome-theme.sh
+
+# -----------------------------------------------------
+# Run pywalfox update to to update firefox theme
+# -----------------------------------------------------
+pywalfox update
+
+# -----------------------------------------------------
+# Run the script to update sddm wallpaper
+# -----------------------------------------------------
+~/dotfiles/sddm/scripts/wallpaper.sh
+
+
+
+return {
+  -- { "uZer/pywal16.nvim" },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      --ccolorscheme = "pywal16",
+      colorscheme = "tokyonight",
+    },
+  },
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      style = "moon",
+      transparent = true,
+      sidebar = "transparent",
+      floats = "transparent",
+    },
+  },
+  {
+    "xiyaowong/transparent.nvim",
+    config = function()
+      require("transparent").clear_prefix("lualine")
+      require("transparent").clear_prefix("NeoTree")
+    end,
+  },
+  --  {
+  --    "nvim-treesitter",
+  --    opts = {
+  --      theme = "pywal16",
+  --    },
+  --  },
+  --  {
+  --    "nvim-notify",
+  --    opts = {
+  --      background_colour = "#000000",
+  --    },
+  --  },
+
+  --  { "AlphaTechnolog/pywal.nvim" },
+  --  {
+  --    "LazyVim/LazyVim",
+  --    opts = {
+  --      colorscheme = "pywal",
+  --    },
+  --  },
+  --  {
+  --    "xiyaowong/transparent.nvim",
+  --    config = function()
+  --      require("transparent").clear_prefix("lualine")
+  --    end,
+  --  },
+}
+
+
+
+
+new clients, 
+clients lost
+new accounts
+accounts closed
+managed accounts, fee-based etc
+assets under management
+transfers in 
+transfers out
+value in
+value out
+equities, options, warrants etc
+
