@@ -79,19 +79,3 @@ return {
   --    end,
   --  },
 }
-
-
-
-
-new clients, 
-clients lost
-new accounts
-accounts closed
-managed accounts, fee-based etc
-assets under management
-transfers in 
-transfers out
-value in
-value out
-equities, options, warrants etc
-
